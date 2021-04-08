@@ -1,0 +1,6 @@
+@mixin absolutePositionValuesHTR($height, $top, $right) {
+  position: absolute;
+  height: $height;
+  top: $top;
+  right: $right;
+}
