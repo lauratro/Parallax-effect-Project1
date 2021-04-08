@@ -1,0 +1,49 @@
+@import "helper/placeholders";
+@import "helper/mixin";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 100vh;
+  background: linear-gradient(240deg, #834d4d, #503d3d);
+  position: relative;
+  color: white;
+  font-family: sans-serif;
+  z-index: -1;
+}
+.intro-text h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.intro-text h3 {
+  font-size: 35px;
+}
+.intro-text {
+  @extend %absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+}
+.chair {
+  @include absolutePositionValuesHTR(700px, 90%, 10%);
+
+  transform: translate(-10%, -90%);
+}
+.big-rose {
+  @include absolutePositionValuesHTR(200px, 10%, 40%);
+}
+.small-rose {
+  @include absolutePositionValuesHTR(100px, 30%, 10%);
+}
+section {
+  height: 100vh;
+  color: #834d4d;
+  @extend %flexCenterCenter;
+
+  font-family: sans-serif;
+  font-size: 35px;
+  background-color: lightslategray;
+}
